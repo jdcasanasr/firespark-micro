@@ -17,7 +17,7 @@ module fetch
     // Note: Simulation only.
     `ifdef SIMULATION
     initial
-        $readmemh("instruction_cache_32.hex", instruction_cache_r);
+        $readmemh("../hex_files/instruction_cache_32.hex", instruction_cache_r);
     `endif
 
     // ToDo: How and why PC counts in fours?
