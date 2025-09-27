@@ -1,3 +1,8 @@
+/* verilator lint_off TIMESCALEMOD */
+
+// ToDo: Can I define these OUTSIDE the source files?
+`define SIMULATION
+
 module fetch
 #(
     // ToDo: Look for a better name for this in the RISC-V spec.
@@ -17,7 +22,7 @@ module fetch
     // Note: Simulation only.
     `ifdef SIMULATION
     initial
-        $readmemh("../hex_files/instruction_cache_32.hex", instruction_cache_r);
+        $readmemh("/home/jdcasanasr/Development/firespark-micro/hex_files/instruction_cache_32.hex", instruction_cache_r);
     `endif
 
     // ToDo: How and why PC counts in fours?

@@ -15,6 +15,8 @@ module fetch_tb ();
             $dumpvars();
         end
 
+    // ToDo: Understand timings well so I don't have to tweak these post-simulation.
+    // ToDo: Can I set simulation with a script?.
     initial
         begin
             #0  clock_r = '1;
@@ -24,8 +26,8 @@ module fetch_tb ();
             #5  reset_nr = '1;
             #10 ;
 
-            #320;
-            #20 $stop;
+            #640;
+            #20 $finish;
         end
 
     always
